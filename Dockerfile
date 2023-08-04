@@ -1,4 +1,4 @@
-FROM node:20 as builder
+FROM node:14 as builder
 ARG REACT_APP_BASE_URL
 WORKDIR '/app'
 COPY ./package.json ./
