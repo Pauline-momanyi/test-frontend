@@ -19,4 +19,7 @@ phases:
       - echo "Update Kube Config"      
       - aws eks update-kubeconfig --name test-deployment-eks
       - echo "Apply changes to kube manifests"
+      - export AWS_ACCESS_KEY_ID=AKIAWFG3NL22U6IIKEMG
+      - export AWS_SECRET_ACCESS_KEY=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
+      - export AWS_DEFAULT_REGION=eu-west-1
       - kubectl -n web set image deployment/test-frontend test-frontend=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:test-$COMMIT_ID
