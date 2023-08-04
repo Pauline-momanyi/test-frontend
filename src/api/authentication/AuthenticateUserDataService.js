@@ -2,7 +2,7 @@ import axios from "axios";
 
 const AuthenticateUserDataService = (username, password) => {
   return axios
-    .post(`${process.env.REACT_APP_BASE_URL}`, {
+    .post(`${process.env.REACT_APP_BASE_URL}/authenticate`, {
       username,
       password,
     })
